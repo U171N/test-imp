@@ -6,6 +6,8 @@ Cara Menjalankan Program:
 
 3.Setting file .env sesuai database yang akan digunakan
 
-4.ketik command:php artisan migrate
+4.Buat Database sesuai nama yang sudah di setting pada file .env tersebut
 
-5.Ketik Command:php aritsan db:seed --class=SubTaskSeeder (untuk mendapatkan kategori task)
+5.ketik command:php artisan migrate
+
+6.Ketik Command:php aritsan db:seed --class=SubTaskSeeder (untuk mendapatkan kategori task)
