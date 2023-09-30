@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "5b98dd82-4255-4dbb-a200-ba1f4b8d7106",
+		"name": "test-imp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14561117"
+	},
+	"item": [
+		{
+			"name": "get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "fakhruddin",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "fakhruddin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "xyz480167@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "fakhruddin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7|IVCle1ZnlhqRaEj4liNgPotCSMdYxMhoolrw634o919d3f47"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "get Details Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7|IVCle1ZnlhqRaEj4liNgPotCSMdYxMhoolrw634o919d3f47"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks/4"
+			},
+			"response": []
+		},
+		{
+			"name": "create Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7|IVCle1ZnlhqRaEj4liNgPotCSMdYxMhoolrw634o919d3f47"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"category\": 1,\r\n    \"deskripsi\": \"Tugas Membuat Website\",\r\n    \"tanggal_mulai\": \"2023-10-01\",\r\n    \"tanggal_berakhir\": \"2023-11-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7|IVCle1ZnlhqRaEj4liNgPotCSMdYxMhoolrw634o919d3f47"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \"category\": 2,\r\n    \"deskripsi\": \"Tugas Presentasi Website\",\r\n    \"tanggal_mulai\": \"2023-10-11\",\r\n    \"tanggal_berakhir\": \"2023-10-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/tasks/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "7|IVCle1ZnlhqRaEj4liNgPotCSMdYxMhoolrw634o919d3f47"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/tasks/7"
+			},
+			"response": []
+		}
+	]
+}
